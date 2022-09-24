@@ -8,7 +8,13 @@ body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  /* background-image: url("./bg.jpg"); */
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
 }
 
 .win {
@@ -45,30 +51,13 @@ body {
   padding: 32px;
 }
 
-/* .ans button {
-  margin: 20px;
-  padding: 20px;
-  width: 450px;
-  border-radius: 40px;
-  cursor: pointer;
-  background-color: #2d035e;
-  font-size: 26px;
-  color: white;
-} */
-
 .ans {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  /* border: 2px solid red; */
+  align-items: center; 
 }
 
-/* to remove the radio icon*/
-
-/* input[type="radio"]{
-  opacity: 0;
-} */
 
 .option {
   margin: 20px;
@@ -137,7 +126,7 @@ body {
   transform: translate(-50%, -50%);
   margin: 20px;
   padding: 20px;
-  width: 450px;
+  width: 200px;
   border-radius: 40px;
   cursor: pointer;
   background-color: #2d035e;
