@@ -5,8 +5,11 @@
 
 ## Screenshots:
 
-![Screenshot:]()
-![Screenshot:]()
+### Loading-Screen:
+![Loading-Screen:](./screenshots/loading.png)
+
+### Main-Screen:
+![Main-Screen:](./screenshots/main-screen.png)
 
 ## Features:
 
@@ -14,9 +17,6 @@
 - Minimal and Lightweight User Interface
 - Easy to use and basic functionality.
 -  Users can quit from game anytime.
--  The total winning price will be displayed after every question.
-
-
 
 ## Built With:
 

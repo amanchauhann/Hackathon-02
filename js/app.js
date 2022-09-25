@@ -4,9 +4,6 @@ let optionContainer = document.querySelectorAll(".option")
 let inputs = document.querySelectorAll(".input")
 let confirmBtn = document.getElementById("confirm")
 let form = document.getElementById("form")
-
-
-
 let money = document.querySelector(".money")
 let win = document.querySelector(".win")
 let contain = document.querySelector(".contain");
@@ -14,10 +11,10 @@ let circle = document.querySelector(".circle");
 let on = document.querySelector(".cssbuttons-io-button");
 let btn = document.querySelector(".btn");
 let heading = document.querySelector(".heading");
+let loadHead = document.querySelector(".loading-heading")
 
 
-// money.style.display = "none";
-// win.style.display = "none";
+loadHead.style.display = "block"
 heading.style.display = "none"
 circle.style.display = "none";
 contain.style.display = "none";
@@ -29,16 +26,14 @@ let timer;
 
 // loading screen
 on.addEventListener('click', () => {
-    // money.style.display = "flex";
-    // win.style.display = "flex";
     heading.style.display = "block"
     circle.style.display = "flex";
     contain.style.display = "flex";
     on.style.display = "none";
     loadingScreen.style.display = "none";
-    timer = 30
+    loadHead.style.display = "none"
+    timer = 30;
 })
-
 
 fetch("https://opentdb.com/api.php?amount=10&type=multiple")
     .then(res => res.json())
@@ -99,24 +94,14 @@ function render(data) {
 
         else {
             setTimeout(() => {
-                optionContainer[0].style.backgroundColor = "green"
-
-            }, 200)
-            alert("You have selected incorrect answer")
-            setTimeout(() => {
-                // show();
-                location.reload()
-            }, 1500);
+                optionContainer[0].style.backgroundColor = "green"                
+            }, 800)
         }
-
-
-        // added a timer
-        setTimeout(() => {
-            circle.innerHTML = 30;
-            timer = 30;
-            clearInterval(interval);
-        }, 1000);
     })
+    // added a timer   
+    circle.innerHTML = 30;
+    timer = 30;
+    clearInterval(interval);
 }
 
 timer = 30;
@@ -127,31 +112,8 @@ function time() {
         circle.innerHTML = timer;
         if (timer === 0) {
             clearInterval(interval);
+            // show();
         }
     }, 1000);
 }
-
 time();
-
-
-
-
-// show();
-
-// function show() {
-//     contain.innerHTML = `<h2>Congratulations</h2>
-//     <p><h1>You won :${score}</h1></p>
-//     <p><button class="btn" onclick="location.reload()" style="width:174px; margin:15px;cursor:pointer;font-size:26px; border-radius:4px;"> Play Again </button></p>`;
-//     contain.style.backgroundColor = "blue";
-//     contain.style.height = "400px";
-//     contain.style.width = "600px";
-//     contain.style.color = "black";
-//     contain.style.fontSize = "30px";
-//     contain.style.margin = "10px";
-//     audio.muted = true;
-//     money.style.display = "none";
-//     win.style.display = "none";
-//     circle.style.display = "none";
-// }
-
-
