@@ -5,14 +5,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/logo1.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
             crossorigin="anonymous" referrerpolicy="no-referrer">
-        <title>KBC</title>
-        <link rel="stylesheet" href="./style.css">
+        <title>KBC Game</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
-        <h1>KBC Game</h1>
+        <div class="win">You won: ₹ 20,000</div>
+        <div class="circle"></div>
+        <div class="money"> ₹ 10,000 </div>
+
+        <div class="loading">
+            <button class="cssbuttons-io-button">Click here to start
+                <div class="icon">
+                    <svg height="24" width="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
         <div class="contain">
             <div class="ques" id="question"></div>
 
@@ -38,7 +53,7 @@
 
             <div class="btn"></div>
         </div>
-        <script src="./app.js"></script>
+        <script src="./js/app.js"></script>
     </body>
 
 </html>
